@@ -1,25 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Information System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">           
+    <main class="container">
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">Academic records / 2026</p>
+            <h1 id="page-title">Student<br><span>Information</span></h1>
+            <p class="intro-text">A clear snapshot of the student profile and current programme details.</p>
+        </section>
 
-        <h1>Student Information System</h1>
+        <section class="profile-card" aria-label="Student profile">
+            <div class="profile-heading">
+                <div class="avatar" aria-hidden="true">AN</div>
+                <div>
+                    <p class="card-label">Profile record</p>
+                    <h2>Annie Neena</h2>
+                </div>
+                <span class="status">Active</span>
+            </div>
 
-        <p><strong>Name:</strong> Cynthia T</p>
-        <p><strong>Register Number:</strong> 101</p>
-        <p><strong>Programme:</strong> MCA</p>
+            <dl class="details-list">
+                <div>
+                    <dt>Register number</dt>
+                    <dd>117</dd>
+                </div>
+                <div>
+                    <dt>Programme</dt>
+                    <dd>MCA</dd>
+                </div>
+            </dl>
 
-        <button onclick="showDetails()">Show Details</button>
+            <button type="button" onclick="showDetails()">
+                <span>View record status</span>
+                <span class="arrow" aria-hidden="true">&#8594;</span>
+            </button>
+            <p id="details" class="details-message" role="status" aria-live="polite"></p>
+        </section>
 
-        <p id="details"></p>
-
-    </div>
+    </main>
 
     <script src="script.js"></script>
 
